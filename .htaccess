@@ -1,0 +1,17 @@
+RewriteEngine on
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+
+RewriteRule ^haber-([0-9a-zA-Z-_]+)  haber.php?sef=$1 [L,QSA]
+RewriteRule ^kategori-([0-9a-zA-Z-_]+)  kategori.php?sef=$1 [L,QSA]
+RewriteRule ^yazar-([0-9a-zA-Z-_]+)  yazar.php?sef=$1 [L,QSA]
+
+
+
+
+
